@@ -30,10 +30,18 @@ env = simpy.Environment()
 
 # ### Conduct DES
 
-# In[5]:
+# In[8]:
 
 
+import simpy
+import random
+import pandas as pd
+from datetime import datetime, timedelta
+import networkx as nx
+import matplotlib.pyplot as plt
 
+# Initialize the environment
+env = simpy.Environment()
 
 # Define the coffee shop process
 class CoffeeShop:
@@ -130,7 +138,7 @@ print(df_log)
 create_process_graph(df_log)
 
 
-# In[6]:
+# In[9]:
 
 
 df_log.to_csv('simulation_log.csv', index=False)
